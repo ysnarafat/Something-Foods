@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30413.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FoodItems.API", "FoodItems.API\FoodItems.API.csproj", "{2C911E7D-8E9B-4103-B196-AB3B39F006EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApp", "WebApp\WebApp.csproj", "{F50B0E7A-3870-47C8-8BA1-82D8AABC0EE3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C911E7D-8E9B-4103-B196-AB3B39F006EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C911E7D-8E9B-4103-B196-AB3B39F006EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C911E7D-8E9B-4103-B196-AB3B39F006EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C911E7D-8E9B-4103-B196-AB3B39F006EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F50B0E7A-3870-47C8-8BA1-82D8AABC0EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F50B0E7A-3870-47C8-8BA1-82D8AABC0EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F50B0E7A-3870-47C8-8BA1-82D8AABC0EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F50B0E7A-3870-47C8-8BA1-82D8AABC0EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {39D2BF39-4853-44D7-8440-F44F36CB30FC}
+	EndGlobalSection
+EndGlobal

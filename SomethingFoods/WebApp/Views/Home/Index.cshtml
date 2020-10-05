@@ -1,0 +1,17 @@
+﻿@model FoodItemModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@foreach (var item in Model.items)
+{
+<div class="text-center">
+    <p>@item.Name</p>
+    <p>@item.Price</p>
+</div>
+}
