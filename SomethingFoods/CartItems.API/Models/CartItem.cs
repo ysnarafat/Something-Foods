@@ -3,17 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FoodItems.API.Models
+namespace CartItems.API.Models
 {
-    public class Cart
+    public class CartItem
     {
         public Guid Id { get; set; }
-        public IList<FoodItem> FoodItems { get; set; }
+        public string Name { get; set; }
         public int TotalItems { get; set; }
         public int TotalCost { get; set; }
-        public Cart()
-        {
-            FoodItems = new List<FoodItem>();
-        }
     }
 }

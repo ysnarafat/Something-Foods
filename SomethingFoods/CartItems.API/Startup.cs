@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FoodItems.API.Models;
-using FoodItems.API.Repositories;
+using CartItems.API.Models;
+using CartItems.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,9 +13,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using MongoDB.Driver;
 
-namespace FoodItems.API
+namespace CartItems.API
 {
     public class Startup
     {
@@ -39,7 +38,7 @@ namespace FoodItems.API
         sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
 
-            services.AddSingleton<IFoodItemsRepository,FoodItemsRepository>();
+            services.AddSingleton<ICartItemsRepository, CartItemsRepository>();
 
             //services.AddSwaggerGen(c =>
             //{

@@ -1,27 +1,27 @@
-﻿using FoodItems.API.Models;
+﻿using CartItems.API.Models;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace FoodItems.API.Repositories
+namespace CartItems.API.Repositories
 {
-    public class CartRepository : ICartRepository
+    public class CartItemsRepository : ICartItemsRepository
     {
-        private readonly IMongoCollection<Cart> _col;
-        public CartRepository(DatabaseSettings settings)
+        private readonly IMongoCollection<CartItem> _col;
+        public CartItemsRepository(DatabaseSettings settings)
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-            _col = database.GetCollection<Cart>(settings.CollectionName);
+            _col = database.GetCollection<CartItem>(settings.CollectionName);
         }
-        public List<Cart> GetAllItems()
+        public List<CartItem> GetAllItems()
         {
             var items = _col.Find(item => true).ToList();
             return items;
         }
-        public void InsertItem(Cart cart)
+        public void InsertItem(CartItem cart)
         {
             _col.InsertOne(cart);
         }
