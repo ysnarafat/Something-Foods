@@ -40,8 +40,8 @@ namespace FoodItems.API
 
 
             services.AddSingleton<IFoodItemsRepository,FoodItemsRepository>();
-            services.AddSingleton<ICartRepository, CartRepository>();
 
+           
             //services.AddSwaggerGen(c =>
             //{
             //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity", Version = "v1" });
