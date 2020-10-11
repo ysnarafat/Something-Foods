@@ -9,6 +9,12 @@ namespace FoodItems.API.Repositories
     public interface IFoodItemsRepository
     {
         public List<FoodItem> GetAllItems();
-        public void InsertItem(FoodItem document);
+        public void InsertItem(FoodItem foodItem);
+
+        public FoodItem GetFoodItem(Guid id);
+
+        public void UpdateFoodItem(FoodItem foodItem);
+
+        public void DeleteFoodItem(Guid id);
     }
 }

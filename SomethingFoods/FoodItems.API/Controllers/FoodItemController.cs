@@ -29,12 +29,40 @@ namespace FoodItems.API.Controllers
             return _foodItemsRepository.GetAllItems();
         }
 
+        // GET api/<FoodItemController>/110ec627-2f05-4a7e-9a95-7a91e8005da8
+        [HttpGet("{id}")]
+        public ActionResult<FoodItem> Get(Guid id)
+        {
+            var catalogItem = _foodItemsRepository.GetFoodItem(id);
+            return Ok(catalogItem);
+        }
 
         [HttpPost]
-        public ActionResult Insert([FromBody] FoodItem item)
+        public ActionResult Post([FromBody] FoodItem foodItem)
         {
-            _foodItemsRepository.InsertItem(item);
+            _foodItemsRepository.InsertItem(foodItem);
             return Ok();
         }
+
+        // PUT api/<FoodItemController>
+        [HttpPut]
+        public ActionResult Put([FromBody] FoodItem foodItem)
+        {
+            if (foodItem != null)
+            {
+                _foodItemsRepository.UpdateFoodItem(foodItem);
+                return new OkResult();
+            }
+            return new NoContentResult();
+        }
+
+        // DELETE api/<FoodItemController>/110ec627-2f05-4a7e-9a95-7a91e8005da8
+        [HttpDelete("{id}")]
+        public ActionResult Delete(Guid id)
+        {
+            _foodItemsRepository.DeleteFoodItem(id);
+            return new OkResult();
+        }
+
     }
 }
