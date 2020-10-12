@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CartItems.API\CartItems.API.csproj" />
     <ProjectReference Include="..\FoodItems.API\FoodItems.API.csproj" />
   </ItemGroup>
 

@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
+using CartItems.API.Models;
 using FoodItems.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -30,6 +31,20 @@ namespace WebApp.Controllers
                 {
                     string apiResponse = await response.Content.ReadAsStringAsync();
                     model.items = JsonConvert.DeserializeObject<List<FoodItem>>(apiResponse);
+                }
+            }
+            return View(model);
+        }
+
+        public async Task<IActionResult> CartItems()
+        {
+            var model = new CartItemModel();
+            using (var httpClient = new HttpClient())
+            {
+                using (var response = await httpClient.GetAsync("https://localhost:44330/api/cartitem"))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    model.items = JsonConvert.DeserializeObject<List<CartItem>>(apiResponse);
                 }
             }
             return View(model);
