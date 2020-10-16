@@ -24,14 +24,72 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var model = new FoodItemModel();
-            using (var httpClient = new HttpClient())
+            //using (var httpClient = new HttpClient())
+            //{
+            //    using (var response = await httpClient.GetAsync("https://localhost:44329/api/fooditem"))
+            //    {
+            //        string apiResponse = await response.Content.ReadAsStringAsync();
+            //        model.items = JsonConvert.DeserializeObject<List<FoodItem>>(apiResponse);
+            //    }
+            //}
+            model.items = new List<FoodItem>
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44329/api/fooditem"))
+                new FoodItem
                 {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    model.items = JsonConvert.DeserializeObject<List<FoodItem>>(apiResponse);
+                    Name = "Rice",
+                    Price = 250
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 400
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 500
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 250
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 400
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 500
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 400
+                },
+                new FoodItem
+                {
+                    Name = "Rice",
+                    Price = 500
                 }
-            }
+            };
             return View(model);
         }
 
