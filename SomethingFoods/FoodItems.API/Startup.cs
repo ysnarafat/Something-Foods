@@ -39,12 +39,13 @@ namespace FoodItems.API
         sp.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
 
-            services.AddSingleton<IFoodItemsRepository,FoodItemsRepository>();
+            services.AddSingleton<IFoodItemsRepository, FoodItemsRepository>();
 
-           
-            //services.AddSwaggerGen(c =>
+
+            //services.AddSwaggerGen(options =>
             //{
-            //    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Identity", Version = "v1" });
+            //    options.DescribeAllEnumsAsStrings();
+            //    options.SwaggerDoc("v1", new OpenApiInfo { Title = "eShopOnContainers - Catalog HTTP API", Version = "v1", Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample" });
             //});
 
         }

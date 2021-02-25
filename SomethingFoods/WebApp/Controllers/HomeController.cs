@@ -24,16 +24,47 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var model = new FoodItemModel();
-            using (var httpClient = new HttpClient())
+            model.items = new List<FoodItem>
             {
-                using (var response = await httpClient.GetAsync("https://localhost:44329/api/fooditem"))
+                new FoodItem
                 {
-                    string apiResponse = await response.Content.ReadAsStringAsync();
-                    model.items = JsonConvert.DeserializeObject<List<FoodItem>>(apiResponse);
-                }
-            }
+                    Name = "Rice",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Burger",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Chicken",
+                    Price = 300
+                },
+                new FoodItem
+                {
+                    Name = "Meat",
+                    Price = 300
+                },
+
+            };
+            //using (var httpClient = new HttpClient())
+            //{
+            //    using (var response = await httpClient.GetAsync("https://localhost:44329/api/fooditem"))
+            //    {
+            //        string apiResponse = await response.Content.ReadAsStringAsync();
+            //        model.items = JsonConvert.DeserializeObject<List<FoodItem>>(apiResponse);
+            //    }
+            //}
             return View(model);
         }
+
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+
 
         public IActionResult Privacy()
         {

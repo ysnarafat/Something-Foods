@@ -3,15 +3,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<style>
+    .row {
+        margin-top: 30px;
+        margin-bottom: 30px
+    }
+</style>
 
-@foreach (var item in Model.items)
-{
-<div class="text-center">
-    <p>@item.Name</p>
-    <p>@item.Price</p>
-</div>
-}
+<h1 class="text-center"> Our Food Items</h1>
+<div class="md-form active-purple-2 mb-3">
+    <input class="form-control text-center" type="text" placeholder="Search" aria-label="Search">
+    </div>
+    @*<div class="text-center">
+            <h1 class="display-4">Welcome</h1>
+            <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        </div>*@
+
+
+    <div class="container">
+        <div class="row mx-auto">
+            @foreach (var item in Model.items)
+            {
+                <div class="col">
+                    <div class="card" style="width: 20rem;">
+                        <div class="card-body">
+                            <p>@item.Name</p>
+                            <p>@item.Price</p>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
