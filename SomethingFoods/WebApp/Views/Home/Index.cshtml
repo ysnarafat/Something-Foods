@@ -3,6 +3,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+<<<<<<< HEAD
 <style>
     .row {
         margin-top: 30px;
@@ -36,3 +37,68 @@
 
         </div>
     </div>
+=======
+@*<div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    </div>*@
+
+<style>
+    .odd-stripe {
+        background-color: aliceblue;
+    }
+</style>
+
+<div class="odd-stripe" id="block-40837921">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-1 visible-xs"></div>
+            <div class="col-lg-8 col-lg-offset-2 col-xs-10 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <h2>
+                    Our Items
+                </h2>
+                <br>
+                <div class="row">
+
+                    <div class="col-lg-9 col-md-8 col-sm-8">
+                        <p>
+                            We are determined to give best effort to make your food delicious and healthy...
+                        </p>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="container">
+
+    <div class="row">
+
+        @foreach (var item in Model.items)
+        {
+        <div class="card col-sm-6 col-md-6 col-lg-3 m-2">
+            <img src="https://mdbootstrap.com/img/Photos/Horizontal/Food/8-col/img (5).jpg" class="card-img-top" style="width: 100%;
+    object-fit: cover;" alt="...">
+            <div class="card-body">
+                <h4 class="card-title font-weight-bold"><a>@item.Name</a></h4>
+                <!-- Card Text-->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <hr class="my-4">
+                <p>Tk. @item.Price</p>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>
+
+
+<!-- Card -->
+
+>>>>>>> 41d53e24de40c601bfc3551ab17b95fe2d7985fe
